@@ -6,13 +6,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class ForwardController {
-    @GetMapping("/range/**")
+    @GetMapping("/old/**")
     public ModelAndView forward() {
         return new ModelAndView("forward:/test.html");
     }
 
-    @GetMapping("/ng/**")
-    public ModelAndView forwardNg() {
+    @GetMapping("/range/**")
+    public ModelAndView forwardRange() {
         return new ModelAndView("forward:/my-angular-app/dist/index.html");
     }
 }
