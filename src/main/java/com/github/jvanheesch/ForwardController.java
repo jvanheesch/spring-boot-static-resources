@@ -10,4 +10,9 @@ public class ForwardController {
     public ModelAndView forward() {
         return new ModelAndView("forward:/test.html");
     }
+
+    @GetMapping("/ng/**")
+    public ModelAndView forwardNg() {
+        return new ModelAndView("forward:/my-angular-app/dist/index.html");
+    }
 }
