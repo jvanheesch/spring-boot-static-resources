@@ -1,10 +1,10 @@
 package com.github.jvanheesch;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-@RestController
+@Controller
 public class ForwardController {
     @GetMapping("/old/**")
     public ModelAndView forward() {
@@ -12,8 +12,8 @@ public class ForwardController {
     }
 
     @GetMapping("/range/**")
-    public ModelAndView forwardRange() {
-        return new ModelAndView("forward:/my-angular-app/dist/index.html");
+    public String forwardRange() {
+        return "forward:/my-angular-app/dist/index.html";
     }
 
     @GetMapping("/imon")
