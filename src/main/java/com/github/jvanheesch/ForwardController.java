@@ -15,4 +15,9 @@ public class ForwardController {
     public ModelAndView forwardRange() {
         return new ModelAndView("forward:/my-angular-app/dist/index.html");
     }
+
+    @GetMapping("/imon")
+    public String imon() {
+        return "imon";
+    }
 }
